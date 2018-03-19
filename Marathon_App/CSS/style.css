@@ -1,0 +1,19 @@
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    font-size: 14px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+.navbar-nav li a:hover {
+    color: darkgray; !important;
+    font-weight: bolder;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+.container {
+      padding: 100px 120px;
+      border:grey solid 1px;
+}
