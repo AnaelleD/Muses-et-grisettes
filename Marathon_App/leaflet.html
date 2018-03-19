@@ -37,9 +37,7 @@
                 /*
                  * On va créer un cercle sur la carte pour chaque point
                  */
-				 
-
-				L.marker([latitude, longitude]).addTo(map);
+				L.marker([latitude, longitude], {icon: greenIcon}).addTo(map).bindPopup("I am an orange leaf.");
 				
 
             }
