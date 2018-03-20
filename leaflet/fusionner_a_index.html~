@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Leflet</title>
+		
+        <link rel="stylesheet" href="CSS/leaflet.css" />
+        <script src="JS/leaflet.js"></script>
+			<script src="JS/maps_femme.js"></script> 
+			
+		<script src="JS/d3.v4.js"> </script> 
+		<script src="bootstrap/jQuery.js"></script> 
+		<script src="bootstrap/jqueryFX.custom/jquery-ui.js"></script>  
+		<link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css"><!-- style Bootstrap v3.3.7 -->
+		<script src="bootstrap/jqueryFX.custom/jquery-ui.min.js"></script> 
+		
+		
+	
+    </head>
+    <body onload="initmap();actumap()">
+    
+		<div class="well well-sm text-center">
+			<h3>Faites votre sélection :</h3>
+			<div class="btn-group" data-toggle="buttons"> 
+			<label class="btn btn-rouge"><input type="checkbox" value="1" name="periode" onclick="actumap()"  checked>Figures féminines légendaires</label>
+			<label class="btn btn-jaune"><input type="checkbox" value="3" name="periode" onclick="actumap()" >Femmes du 16e siècle</label>
+			<label class="btn btn-vert "><input type="checkbox" value="4" name="periode" onclick="actumap()" checked>Femmes du 17e siècle</label>
+			<label class="btn btn-bleu"><input type="checkbox" value="5" name="periode" onclick="actumap()" >Femmes du 18e siècle</label>
+			<label class="btn btn-mauve"><input type="checkbox" value="6" name="periode" onclick="actumap()" >Femmes du 19e siècle</label>
+			<label class="btn btn-rose"><input id="rose" type="checkbox" value="7" name="periode" onclick="actumap()" >Femmes du 20e siècle</label>
+			</div>
+		</div>
+		<div class="well" style='overflow: hidden'>
+			<div id="mapFemme"></div>
+		</div>
+
+    </body>
+</html>

@@ -1,0 +1,29 @@
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    font-size: 14px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+.navbar-nav li a:hover {
+    color: darkgray; !important;
+    font-weight: bolder;
+}
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+.container {
+      padding: 150px 60px;
+      margin-left: 1px;
+      margin-right: 1px;
+      border:grey solid 1px;
+}
+
+.hastag{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
