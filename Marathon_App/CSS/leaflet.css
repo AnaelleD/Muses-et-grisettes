@@ -13,8 +13,7 @@
 .leaflet-zoom-box,
 .leaflet-image-layer,
 .leaflet-layer { /* TODO optimize classes */
-	position:absolute;
-}
+	position: absolute;
 	}
 .leaflet-container {
 	overflow: hidden;

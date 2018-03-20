@@ -1,6 +1,6 @@
 /* initialisation de la fonction initmap */
 function initmap() {
-	document.getElementById('mapFemme').innerHTML = "<div id='map' style='width:99%; height:450px;'></div>";
+	document.getElementById('mapFemme').innerHTML = "<div id='map' style='width:99%; height:450;'></div>";
 	map = new L.Map('map');
 	var osmUrl='http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png';
 	var osmAttrib='Map data de OpenStreetMap';
