@@ -15,12 +15,66 @@
 }
 .container {
       padding: 150px 60px;
-      margin-left: 1px;
-      margin-right: 1px;
       border:grey solid 1px;
 }
 
-.hastag{
+.hashtag{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.Nom{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:5%;
+}
+.titre{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 27%;
+	margin-left:5%;
+}
+.Date{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.Adress{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.NomT1{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.NomT2{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.Twit1{
+	color: #efb105;
+	font-family: gotham; 
+	position: fixed;
+	margin-top: 25%;
+	margin-left:80%;
+}
+.Twit2{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;

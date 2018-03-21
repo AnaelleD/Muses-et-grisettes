@@ -3,7 +3,7 @@
 <head>
 
 	<title>Marathon </title>
- 	<meta http-equiv="Content-Type"content="text/html; charset=UTF-8" /> 
+ 	<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
  	
  		 <!-- STYLE -->
@@ -45,19 +45,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#Accueil">ACCUEIL</a></li>
         <li><a href="#section1">Temporelle</a></li>
-        <li><a href="#section2">par Thématique</a></li>
-        <li><a href="#section3">Geographique</a></li>
-        <li><a href="#section4">Réseau</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">+++
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li> 
-          </ul>
-        </li>
+        <li><a href="#section2">Réseau</a></li>
+        <li><a href="#section3">Geographie</a></li>
+        <li><a href="#section4">Wikipedia</a></li>
+        
       </ul>
     </div>
   </div>
@@ -127,7 +118,15 @@
     <div class="cards-container">
       <section class="card-single active" period="period1">
         <div class="content">
-         <p class="hastag"># TEST</p>
+         <p class="Nom">NOM</p>
+         <p class="titre">titre</p>
+         <p class="Date">date</p>
+         <p class="Adress">adress</p>
+         <p class="NomT1">nomT1</p>
+         <p class="Twit1">twitt T1</p>
+         <p class="NomT2">Nom T2</p>
+         <p class="Twit2">Twitt2</p>
+         <p class="hashtag">#test</p>
           <img src="img/fiche.png" alt="Canevas" />
          </div>
       </section>
@@ -140,8 +139,7 @@
 </div>
 
 <div id="section2" class="container text-center">
-  <h3>Thématique</h3>
-  <p>sous forme d'arbre ou de tremap</p>
+  <h3>Réseau</h3>
 </div>
 
 <div id="section3" class="container" >
@@ -149,12 +147,12 @@
 		<div class="well well-sm text-center">
 			<h3>Faites votre sélection :</h3>
 				<div class="btn-group" data-toggle="buttons"> 
-				<label class="btn btn-rouge"><input type="checkbox" value="1" name="periode" onclick="actumap()"  checked>Figures féminines légendaires</label>
-				<label class="btn btn-jaune"><input type="checkbox" value="3" name="periode" onclick="actumap()" >Femmes du 16e siècle</label>
+				<label class="btn btn-rouge"><input type="checkbox" value="1" name="periode" onclick="actumap()" checked>Figures féminines légendaires</label>
+				<label class="btn btn-jaune"><input type="checkbox" value="3" name="periode" onclick="actumap()" checked>Femmes du 16e siècle</label>
 				<label class="btn btn-vert "><input type="checkbox" value="4" name="periode" onclick="actumap()" checked>Femmes du 17e siècle</label>
-				<label class="btn btn-bleu"><input type="checkbox" value="5" name="periode" onclick="actumap()" >Femmes du 18e siècle</label>
-				<label class="btn btn-mauve"><input type="checkbox" value="6" name="periode" onclick="actumap()" >Femmes du 19e siècle</label>
-				<label class="btn btn-rose"><input id="rose" type="checkbox" value="7" name="periode" onclick="actumap()" >Femmes du 20e siècle</label>
+				<label class="btn btn-bleu"><input type="checkbox" value="5" name="periode" onclick="actumap()" checked>Femmes du 18e siècle</label>
+				<label class="btn btn-mauve"><input type="checkbox" value="6" name="periode" onclick="actumap();" checked>Femmes du 19e siècle</label>
+				<label class="btn btn-rose"><input  type="checkbox" value="7" name="periode" onclick="actumap();" checked>Femmes du 20e siècle</label>
 			</div>
 		</div>
 		<div class="well" >
@@ -165,7 +163,7 @@
 
 
 <div id="section4" class="container text-center">
-  <h3>Réseau</h3>
+  <h3>wikipedia</h3>
 </div>
 
 <div id="footer" class="container text-center">
