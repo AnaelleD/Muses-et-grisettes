@@ -36,8 +36,9 @@ function actumap(){
 							iconAnchor: [30,100], // point of the icon which will correspond to marker's location
 							popupAnchor: [30, -100] // point from which the popup should open relative to the iconAnchor
 						});
-						var popup = '<b>'+data[i]["nom"]+'</b>'+'<br>'+'#'+data[i]["motCles"];
-						popup = popup.replace(/, /g, " #"); // rajouter des #
+						var popup = '<b>'+data[i]["nom"]+'</b>'+'<br>'+'#'+data[i]["motCles"]+'<br>';
+						popup = popup.replace(/, /g, " #");
+						popup += '<span class="glyphicon glyphicon-home"></span>'+' '+ data[i]["adresse"]; // rajouter des #
 						L.marker([latitude, longitude], {icon: iconF}).addTo(map).bindPopup(popup); // Rajouter les pins
 					}
 				}
