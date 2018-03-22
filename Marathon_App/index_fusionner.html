@@ -30,9 +30,10 @@
 	<script src="JS/maps_femme.js"></script> 
 	<script src="JS/api_dbpedia.js"></script> 
 	<script src="JS/network.js"></script> 
+	<script src="JS/ficheTwitt.js"></script> 
 </head>
 
-<body onload="initmap();actumap();femmes_wiki();network()"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
+<body onload="initmap();actumap();femmes_wiki();network();affichageTimeLine()"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
 
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -43,33 +44,32 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span> 
 		  </button>
-		  <a class="navbar-brand" href="#">Logo</a>
+		  <a class="navbar-brand" href="#"><img src="img/logo/logo.png"></a>
 		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<form class="navbar-form" role="search">
+						<div class="input-group">
+							<input class="form-control" type="text" placeholder="Rechercher une femme..." size = "30px">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+								</div>
+						</div>
+					</form>
+				</li>
 				<li><a href="#Accueil">ACCUEIL</a></li>
 				<li><a href="#section1">Frise temporelle</a></li>
 				<li><a href="#section2">Réseau social</a></li>
 				<li><a href="#section3">Carte</a></li>
 				<li><a href="#section4">Wikipédia</a></li>
 			</ul>
-			<form class="navbar-form" role="search">
-				<div class="input-group">
-					<input class="form-control" type="text" placeholder="Rechercher une femme..." size = "30px">
-					<div class="input-group-btn">
-						<button class="btn btn-default" type="submit">
-						<i class="glyphicon glyphicon-search"></i>
-						</button>
-					</div>
-				</div>
-			</form>
 		</div>
 	  </div>
 	</nav>
 
-	<div id="Accueil" class="container text-center">
-	  <h3>Intro</h3>
-	  <p>Image banniere</p>
+	<div id="Accueil" class="jumbotron text-center ">
+		<img src="img/logo/header.png" id="header">
 	</div>
 
 	<div id="section1" class="container" >
@@ -78,38 +78,39 @@
 	<!--   <div class="periods-section"> -->
 		<div class="periods-container">
 		  <section class="period-single" period="period1">
-			<h4 class="year">950-1100</h4>
+			<h4 class="year">xxxx-xxxx</h4>
 			<h2 class="title">Les femmes Légendaires</h2>
 			<p>blah</p>
 		  </section>
 		  <section class="period-single" period="period2">
 			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
-			<p>blah</p>
+			<h2 class="title">Moyen -Age</h2>
+			<p>Le moyen âge est particularisé / définis  par les mythes fondateurs de la cité montpelliéraine Les Montpelliéraines sont décrites comme étant particulièrement belle, intelligente ce qui feraient d’elles, plus belles dames du pays.
+</p>
 		  </section>
 		  <section class="period-single" period="period3">
-			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
+			<h4 class="year">1500-1599</h4>
+			<h2 class="title">16e siecle</h2>
 			<p>blah</p>
 		  </section>
 		  <section class="period-single" period="period4">
-			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
+			<h4 class="year">1600-1699</h4>
+			<h2 class="title">17e siecle</h2>
 			<p>blah</p>
 		  </section>
 		  <section class="period-single" period="period5">
-			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
+			<h4 class="year">1700-1799</h4>
+			<h2 class="title">18e siecle</h2>
 			<p>blah</p>
 		  </section>
 		  <section class="period-single" period="period6">
-			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
+			<h4 class="year">1800-1900</h4>
+			<h2 class="title">19e siecle</h2>
 			<p>blah</p>
 		  </section>
 		  <section class="period-single" period="period7">
-			<h4 class="year">950-1100</h4>
-			<h2 class="title">Les femmes Légendaires</h2>
+			<h4 class="year">1900-2000</h4>
+			<h2 class="title">20e siecle</h2>
 			<p>blah</p>
 		  </section>
 		  <div class="btn-back"></div>
@@ -128,22 +129,22 @@
 	<!--   </div> -->
 	<!-- ### -->
 	<!--   <div class="cards-section"> -->
-		<div class="cards-container">
-		  <section class="card-single active" period="period1">
-			<div class="content">
-			 <p class="Nom">NOM</p>
-			 <p class="titre">titre</p>
-			 <p class="Date">date</p>
-			 <p class="Adress">adress</p>
-			 <p class="NomT1">nomT1</p>
-			 <p class="Twit1">twitt T1</p>
-			 <p class="NomT2">Nom T2</p>
-			 <p class="Twit2">Twitt2</p>
-			 <p class="hashtag">#test</p>
-			  <img src="img/fiche.png" alt="Canevas" />
-			 </div>
-		  </section>
-		  
+		<div id="fiche" class="cards-container">
+			<section class="card-single active" period="period1">
+        	<div class="content">
+         <p class="Nom">NOM</p>
+         <p class="titre">@</p>
+         <p class="Date"><span class="glyphicon glyphicon-calendar"></span></p>
+         <p class="Adress"><span class="glyphicon glyphicon-home"></span></p>
+         <p class="NomT1">@nomT1</p>
+         <p class="Twit1">twitt T1</p>
+         <p class="NomT2">@nom T2</p>
+         <p class="Twit2">Twitt2aaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+         <p class="hashtag">#test</p>
+         <p class="Post">3</p>
+         <img src="img/fiche.png" alt="Canevas" />
+         </div>
+      </section>;	  
 		</div>
 	<!--   </div> -->
 	<!-- ###   -->
@@ -205,13 +206,10 @@
 
 	<div id="footer" class="container text-center">
 	  <h3>Partenaire:</h3>
-	 <img src="" alt="UPVM3">
-	  <img src="" alt="Musée Fabre">
-	   <img src="" alt="ArtFX">
-	  <img src="" alt="ITIC">
-	  
-	  
-	  
+	 <img src="img/logo/um3.png" alt="UPVM3">
+	  <img src="img/logo/itic.png" alt="ITIC">
+	   <img src="img/logo/miashs.png" alt="Miashs">
+	   
 	</div>
 
 </body>

@@ -5,11 +5,11 @@
 }
 
 .well.wikipedia a {
-	color:white;
+	color:#EFB105;
 	text-decoration:underline;
 }
 
 .well.wikipedia a:hover {
-	color:#EFB105;
+	color:white;
 	text-decoration:none;
 }

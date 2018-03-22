@@ -1,3 +1,19 @@
+@font-face {
+    font-family: gotham;
+    src: url(Gotham.woff);
+}
+#header{
+	width: 100%;
+}
+#footer{
+	background-color: navy;
+	color: white;
+	width: 100%
+}
+.jumbotron {
+	background-color: white !important;
+}
+
 .navbar {
     margin-bottom: 0;
     border: 0;
@@ -14,70 +30,82 @@
     background-color:#29292c !important;
 }
 .container {
-      padding: 150px 60px;
-      border:grey solid 1px;
+      padding: 50px 100px;
 }
-
 .hashtag{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	width: 10%;
+	margin-top: 23%;
+	margin-left:75%;
 }
 .Nom{
-	color: #efb105;
+	color: white;
+	font-size: 150%;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
+	margin-top: 23%;
 	margin-left:5%;
 }
 .titre{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 27%;
+	margin-top: 25%;
 	margin-left:5%;
 }
 .Date{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	margin-top: 27%;
+	margin-left:5%;
 }
 .Adress{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	margin-top: 29%;
+	margin-left:5%;
 }
 .NomT1{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
 	margin-top: 25%;
-	margin-left:80%;
+	margin-left:29%;
 }
 .NomT2{
 	color: #efb105;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	margin-top: 35%;
+	margin-left:29%;
 }
 .Twit1{
-	color: #efb105;
+	width: 250px;
+	overflow-x: hidden;
+	color: white;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	margin-top: 27%;
+	margin-left:30%;
 }
 .Twit2{
-	color: #efb105;
+	width: 250px;
+	overflow-x: hidden;
+	color: white;
 	font-family: gotham; 
 	position: fixed;
-	margin-top: 25%;
-	margin-left:80%;
+	margin-top: 37%;
+	margin-left:30%;
+}
+.Post{
+	color: white;
+	font-family: gotham; 
+	font-size: 120%;
+	position: fixed;
+	margin-top: 16%;
+	margin-left:25%;
 }
