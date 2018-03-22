@@ -1,4 +1,10 @@
-
+.body-wrap{
+  background-color: #fff;
+  width: 100%;
+  min-height: 500px;
+  margin: 0 auto;
+  font-size: 12px;
+  }
 .pres-timeline {
   font-family: roboto, helvetica, sans-serif;
   font-size: 12px;

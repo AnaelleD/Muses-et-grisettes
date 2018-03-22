@@ -15,6 +15,7 @@ function actumap(){
 	/* Import des données */
 	d3.csv("Data/bd_femmes_mtp.csv", function(error, data){	
 	
+		// Recherche par période
 		$("input[name='periode']").change(function(){
 			var periode = []; // initier liste periodes choisies
 			$.each($("input[name='periode']:checked"), function(){ 
@@ -44,6 +45,36 @@ function actumap(){
 				}
 			}		 
 		})
+		
+		
+		
+		$("#search_button").click(function() {
+			var femme_choisie = $( "#search_bar" ).val();
+	
+			/*Reset the map */
+			initmap();
+			
+			/* On boucle sur les données pour chercher la femme */
+			for (i = 0; i < data.length; i++) {
+				if (data[i]["nom"] === femme_choisie){ // Si correspond a femme choisie
+					if (data[i]["latitude"].length > 0) { //Si adresse est renseignee
+						var latitude = data[i]["latitude"];
+						var longitude = data[i]["longitude"];
+						var iconF = L.icon({
+							iconUrl: 'img/pins/'+data[i]["index"]+'.png',
+							iconSize: [60, 100], // size of the icon
+							iconAnchor: [30,100], // point of the icon which will correspond to marker's location
+							popupAnchor: [30, -100] // point from which the popup should open relative to the iconAnchor
+						});
+						var popup = '<b>'+data[i]["nom"]+'</b>'+'<br>'+'#'+data[i]["motCles"]+'<br>';
+						popup = popup.replace(/, /g, " #");
+						popup += '<span class="glyphicon glyphicon-home"></span>'+' '+ data[i]["adresse"]; // rajouter des #
+						L.marker([latitude, longitude], {icon: iconF}).addTo(map).bindPopup(popup); // Rajouter les pins
+					}
+				}
+			}
+			
+		});
 	
 	});
 };
