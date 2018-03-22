@@ -263,8 +263,9 @@ function network(){
 		var svg = d3.select("#reseau").append("svg")
 		.attr("width", width)
 		.attr("height", height)
+		//ZOOM
 		.call(d3.behavior.zoom().on("zoom", function () {svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")}))
-		.on("dblclick.zoom", null)
+		.on('mousedown.zoom',null)
 		.append("g");
 		
 
@@ -317,7 +318,7 @@ function network(){
 		.attr("width", 30)
 		.attr("height", 30);
 
-		//Textes name + relations 
+		//Textes name
 		node.append("svg:text")
 		.attr("class", "nodetext")
 		.attr("dx", 12)
@@ -436,7 +437,7 @@ function network(){
 		.attr("width", width)
 		.attr("height", height)
 		.call(d3.behavior.zoom().on("zoom", function () {svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")}))
-		.on("dblclick.zoom", null)
+		.on('mousedown.zoom',null)
 		.append("g");
 		
 		// Graph Orienté
