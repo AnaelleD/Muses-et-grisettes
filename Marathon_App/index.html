@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	<title>Marathon </title>
+	<title>Dames de Montpellier</title>
  	<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
  	<meta name="viewport" content="width=device-width, initial-scale=1">
  	
@@ -35,9 +35,10 @@
 	<script src="JS/network.js"></script> 
 	<script src="JS/ficheTwitt.js"></script> 
 	<script src="JS/search_bar.js"></script>
+	<script src="JS/ficheTwittRecherche.js"></script>
 </head>
 
-<body onload="initmap();actumap();femmes_wiki();network();affichageTimeLine()"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
+<body onload="initmap();actumap();femmes_wiki();network();affichageTimeLine();actuFrise();"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
 
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -56,7 +57,7 @@
 				<li><a href="#section1">Frise temporelle</a></li>
 				<li><a href="#section2">Réseau social</a></li>
 				<li><a href="#section3">Carte</a></li>
-				<li><a href="#section4">Wikipédia</a></li>
+				<li><a href="#section4">Suggestion d'amies</a></li>
 				<li>
 					<form class="navbar-form" role="search">
 						<div class="input-group">
@@ -75,9 +76,11 @@
 	<div id="Accueil" class="jumbotron text-center ">
 		<img src="img/logo/header.png" id="header">
 	</div>
-<div class="description text-center">
-	<p>Suivez les femmes qui ont marqué l'histoire de la ville de Montpellier. Voyagez dans le temps, découvrez leurs influences et parcourez le dédale des rues de la cité des Dames au travers de notre interface.</p>
-</div>
+	
+	<div class="description text-center">
+		<p>Suivez les femmes qui ont marqué l'histoire de la ville de Montpellier. Voyagez dans le temps, découvrez leurs influences et parcourez le dédale des rues de la cité des Dames au travers de notre interface.</p>
+		<img src="img/youtube.jpg" style="margin-left:55%;margin-top:-20%;width:400px">
+	</div>
 
 	<div id="section1" class="container body-wrap" >
 	
@@ -93,7 +96,7 @@
 		  <section class="period-single" period="period2">
 			<h4 class="year">950-1100</h4>
 			<h2 class="title">Moyen -Age</h2>
-			<p>Le moyen âge est particularisé / définis  par les mythes fondateurs de la cité montpelliéraine Les Montpelliéraines sont décrites comme étant particulièrement belle, intelligente ce qui feraient d’elles, plus belles dames du pays.</p>
+			<p>Le moyen âge caractérise les mythes fondateurs de la cité montpelliéraine. Les Montpelliéraines sont décrites comme étant particulièrement belles et intelligentes, ce qui ferait d’elles les plus belles dames du pays.</p>
 		  </section>
 		  <section class="period-single" period="period3">
 			<h4 class="year">1500-1599</h4>
@@ -186,7 +189,7 @@
 	<div id="section4" class="container">
 	
 		<div class="well">
-			<h2>Données retrouvées sur le web (Wikipédia)</h2>
+			<h2>Vous connaissez peut-être...(source Wikipédia)</h2>
 
 			<div id="femmesWiki"  style="overflow: scroll ;height: 500px; width: 100%;" class="tile"></div>
 
@@ -197,13 +200,12 @@
 	</div>
 
 	<div id="footer" class="container text-center">
-	  <h3>Partenaire:</h3>
-	 <img src="img/logo/um3.png" alt="UPVM3">
-	  <img src="img/logo/itic.png" alt="ITIC">
-	   <img src="img/logo/miashs.png" alt="Miashs">
-	   
+		<h3>Partenaires:</h3>
+			<img src="img/logo/um3.png" alt="UPVM3" style="width:100px">
+			<img src="img/logo/miashs.png" alt="Miashs" style="width:120px">
+	   		<img src="img/logo/crises.png" alt="CRISES" style="width:170px">
+			<img src="img/logo/itic.png" alt="ITIC" style="width:150px">
 	</div>
-
 </body>
  	<!-- Timeline--><script  src="JS/timeline.js"></script>
 </html>

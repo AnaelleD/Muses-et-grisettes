@@ -273,7 +273,5 @@ $(document).ready(function () {
 });
 
 function affichageTimeLine() {
-	d3.csv("Data/bd_femmes_mtp.csv", function(error,data) {
-  console.log(data.length);
-});
+	d3.csv("Data/bd_femmes_mtp.csv", function(error,data) {});
 }

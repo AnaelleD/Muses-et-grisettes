@@ -51,7 +51,7 @@ femmes_wiki = function(){
 				}
 
 				var femmesWikiContainer = document.getElementById('femmesWiki');
-				femmesWikiContainer.innerHTML = '<h4>Nous avons retrouvé '+ femmesDejaVu.length+' autres femmes originaires de Montpellier :</h4>'+lesFemmesHtml;
+				femmesWikiContainer.innerHTML = '<h4>...'+ femmesDejaVu.length+' autres femmes originaires de Montpellier :</h4>'+lesFemmesHtml;
 				})
 		}
 	})
@@ -111,7 +111,7 @@ femmes_wiki = function(){
 				}
 
 				var femmesWikiContainer = document.getElementById('femmesWiki2');
-				femmesWikiContainer.innerHTML = '<h4>Nous avons retrouvé '+ femmesDejaVu2.length+' autres femmes en lien avec Montpellier :</h4>'+lesFemmesHtml2;
+				femmesWikiContainer.innerHTML = '<h4>...' + femmesDejaVu2.length+' autres femmes en lien avec Montpellier :</h4>'+lesFemmesHtml2;
 				})
 		}
 	})

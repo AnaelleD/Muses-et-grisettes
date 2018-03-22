@@ -2,84 +2,94 @@ function network(){
 	
 	//Edges source et target font reference aux index des noeuds.
 	var linksTotal = [
-		{"source":"1","target":"100","value":8,"color":"#F63631", "periode":"1"},
-		{"source":"2","target":"101","value":8,"color":"#F63631", "periode":"1"},
-		{"source":"3","target":"102","value":8,"color":"#FF8C26", "periode":"2"},
-		{"source":"3","target":"103","value":8,"color":"#FF8C26", "periode":"2"},
-		{"source":"3","target":"104","value":8,"color":"#FF8C26", "periode":"2"},
-		{"source":"4","target":"105","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"4","target":"106","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"5","target":"107","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"6","target":"108","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"6","target":"109","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"6","target":"110","value":8,"color":"#F1B206", "periode":"3"},
-		{"source":"8","target":"111","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"8","target":"112","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"8","target":"113","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"8","target":"12","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"8","target":"13","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"9","target":"114","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"9","target":"15","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"9","target":"16","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"10","target":"161","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"10","target":"116","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"11","target":"113","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"11","target":"117","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"12","target":"117","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"12","target":"11","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"13","target":"8","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"13","target":"118","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"14","target":"119","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"14","target":"120","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"14","target":"116","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"15","target":"16","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"15","target":"121","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"15","target":"122","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"16","target":"15","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"16","target":"122","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"16","target":"123","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"16","target":"113","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"17","target":"124","value":8,"color":"#5AA744", "periode":"4"},
-		{"source":"18","target":"125","value":8,"color":"#2D7CFF", "periode":"5"},
-		{"source":"19","target":"126","value":8,"color":"#2D7CFF", "periode":"5"},
-		{"source":"20","target":"127","value":8,"color":"#2D7CFF", "periode":"5"},
-		{"source":"22","target":"128","value":8,"color":"#2D7CFF", "periode":"5"},
-		{"source":"23","target":"129","value":8,"color":"#2D7CFF", "periode":"5"},
-		{"source":"24","target":"130","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"24","target":"131","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"24","target":"160","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"24","target":"159","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"159","target":"160","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"25","target":"132","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"27","target":"133","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"33","target":"134","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"35","target":"135","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"36","target":"136","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"36","target":"137","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"36","target":"138","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"37","target":"139","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"37","target":"140","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"38","target":"141","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"38","target":"142","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"39","target":"143","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"40","target":"144","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"40","target":"145","value":8,"color":"#D262C6", "periode":"6"},
-		{"source":"41","target":"146","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"42","target":"147","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"43","target":"148","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"45","target":"149","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"46","target":"150","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"47","target":"151","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"47","target":"48","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"48","target":"152","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"48","target":"153","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"50","target":"45","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"51","target":"155","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"51","target":"156","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"56","target":"157","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"58","target":"158","value":8,"color":"#FF80CF", "periode":"7"},
-		{"source":"49","target":"154","value":8,"color":"#FF80CF", "periode":"7"}
-		]
+       {"source":"1","target":"100","value":8,"color":"#F63631", "periode":"1", "relation":"soeurs"},
+        {"source":"2","target":"101","value":8,"color":"#F63631", "periode":"1", "relation":"amante"},
+        {"source":"3","target":"102","value":8,"color":"#FF8C26", "periode":"2", "relation":"fille"},
+        {"source":"3","target":"103","value":8,"color":"#FF8C26", "periode":"2", "relation":"nièce"},
+        {"source":"3","target":"104","value":8,"color":"#FF8C26", "periode":"2", "relation":"épouse"},
+        {"source":"4","target":"105","value":8,"color":"#F1B206", "periode":"3", "relation":"fille"},
+        {"source":"4","target":"106","value":8,"color":"#F1B206", "periode":"3", "relation":"épouse"},
+        {"source":"5","target":"107","value":8,"color":"#F1B206", "periode":"3", "relation":"servante"},
+        {"source":"6","target":"108","value":8,"color":"#F1B206", "periode":"3", "relation":"fille"},
+        {"source":"6","target":"109","value":8,"color":"#F1B206", "periode":"3", "relation":"fille"},
+        {"source":"6","target":"110","value":8,"color":"#F1B206", "periode":"3", "relation":"épouse"},
+        {"source":"8","target":"111","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"8","target":"112","value":8,"color":"#5AA744", "periode":"4", "relation":"mère"},
+        {"source":"8","target":"113","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"8","target":"12","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"8","target":"13","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"113","target":"8","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"12","target":"8","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"13","target":"8","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"9","target":"114","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"9","target":"15","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"9","target":"16","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"15","target":"9","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"16","target":"9","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"10","target":"161","value":8,"color":"#5AA744", "periode":"4", "relation":"fille"},
+        {"source":"10","target":"116","value":8,"color":"#5AA744", "periode":"4", "relation":"cousine germaine"},
+        {"source":"11","target":"113","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"11","target":"117","value":8,"color":"#5AA744", "periode":"4", "relation":"soeur"},
+        {"source":"12","target":"117","value":8,"color":"#5AA744", "periode":"4", "relation":"fille"},
+        {"source":"12","target":"11","value":8,"color":"#5AA744", "periode":"4", "relation":"belle-fille"},
+        {"source":"13","target":"8","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"13","target":"118","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"118","target":"13","value":8,"color":"#5AA744", "periode":"4", "relation":"amie"},
+        {"source":"14","target":"119","value":8,"color":"#5AA744", "periode":"4", "relation":"fille"},
+        {"source":"14","target":"120","value":8,"color":"#5AA744", "periode":"4", "relation":"dame de compagnie"},
+        {"source":"14","target":"116","value":8,"color":"#5AA744", "periode":"4", "relation":"maîtresse"},
+        {"source":"15","target":"16","value":8,"color":"#5AA744", "periode":"4", "relation":"soeur"},
+        {"source":"15","target":"121","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"15","target":"122","value":8,"color":"#5AA744", "periode":"4", "relation":"fille"},
+        {"source":"16","target":"15","value":8,"color":"#5AA744", "periode":"4", "relation":"soeur"},
+        {"source":"16","target":"122","value":8,"color":"#5AA744", "periode":"4", "relation":"fille"},
+        {"source":"16","target":"123","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"16","target":"113","value":8,"color":"#5AA744", "periode":"4", "relation":"maîtresse"},
+        {"source":"17","target":"124","value":8,"color":"#5AA744", "periode":"4", "relation":"épouse"},
+        {"source":"18","target":"125","value":8,"color":"#2D7CFF", "periode":"5", "relation":"maîtresse présumée"},
+        {"source":"19","target":"126","value":8,"color":"#2D7CFF", "periode":"5", "relation":"épouse"},
+        {"source":"20","target":"127","value":8,"color":"#2D7CFF", "periode":"5", "relation":"épouse"},
+        {"source":"22","target":"128","value":8,"color":"#2D7CFF", "periode":"5", "relation":"cuisinière"},
+        {"source":"23","target":"129","value":8,"color":"#2D7CFF", "periode":"5", "relation":"maîtresse"},
+        {"source":"24","target":"130","value":8,"color":"#D262C6", "periode":"6", "relation":"fille"},
+        {"source":"24","target":"131","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"24","target":"160","value":8,"color":"#D262C6", "periode":"6", "relation":"maîtresse"},
+        {"source":"24","target":"159","value":8,"color":"#D262C6", "periode":"6", "relation":"mère"},
+        {"source":"159","target":"160","value":8,"color":"#D262C6", "periode":"6", "relation":"fille présumée"},
+        {"source":"25","target":"132","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"27","target":"133","value":8,"color":"#D262C6", "periode":"6", "relation":"amie"},
+        {"source":"133","target":"27","value":8,"color":"#D262C6", "periode":"6", "relation":"amie"},
+        {"source":"33","target":"134","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"35","target":"135","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"36","target":"136","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse 1ere noces"},
+        {"source":"36","target":"137","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse 2eme noces"},
+        {"source":"36","target":"138","value":8,"color":"#D262C6", "periode":"6", "relation":"maîtresse"},
+        {"source":"37","target":"139","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"37","target":"140","value":8,"color":"#D262C6", "periode":"6", "relation":"mère"},
+        {"source":"38","target":"141","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"38","target":"142","value":8,"color":"#D262C6", "periode":"6", "relation":"mère"},
+        {"source":"39","target":"143","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"40","target":"144","value":8,"color":"#D262C6", "periode":"6", "relation":"épouse"},
+        {"source":"40","target":"145","value":8,"color":"#D262C6", "periode":"6", "relation":"muse"},
+        {"source":"41","target":"146","value":8,"color":"#FF80CF", "periode":"7", "relation":"épouse"},
+        {"source":"42","target":"147","value":8,"color":"#FF80CF", "periode":"7", "relation":"épouse"},
+        {"source":"43","target":"148","value":8,"color":"#FF80CF", "periode":"7", "relation":"maîtresse"},
+        {"source":"45","target":"149","value":8,"color":"#FF80CF", "periode":"7", "relation":"épouse"},
+        {"source":"46","target":"150","value":8,"color":"#FF80CF", "periode":"7", "relation":"soeur"},
+        {"source":"47","target":"151","value":8,"color":"#FF80CF", "periode":"7", "relation":"épouse"},
+        {"source":"47","target":"48","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"48","target":"47","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"48","target":"152","value":8,"color":"#FF80CF", "periode":"7", "relation":"mère"},
+        {"source":"48","target":"153","value":8,"color":"#FF80CF", "periode":"7", "relation":"mère"},
+        {"source":"50","target":"45","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"51","target":"155","value":8,"color":"#FF80CF", "periode":"7", "relation":"fille"},
+        {"source":"51","target":"156","value":8,"color":"#FF80CF", "periode":"7", "relation":"fille"},
+        {"source":"56","target":"157","value":8,"color":"#FF80CF", "periode":"7", "relation":"épouse"},
+        {"source":"58","target":"158","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"158","target":"58","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"49","target":"154","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"},
+        {"source":"154","target":"49","value":8,"color":"#FF80CF", "periode":"7", "relation":"amie"}
+        ]
 
 		//Nodes
 		 var nodesTotal = [
@@ -228,12 +238,13 @@ function network(){
 			source: sourceNode,
 			target: targetNode,
 			value: l.value,
-			color: l.color
+			color: l.color,
+			relation: l.relation
 		  };
 		});
 		
 		var width = 1000;
-		height = 1000;
+		height = 600;
 			
 		var color = d3.scale.category20();
 
@@ -242,8 +253,8 @@ function network(){
 		.nodes(d3.values(nodes))
 		.links(links)
 		.size([width, height])
-		.linkDistance(40)
-		.charge(-160)
+		.linkDistance(100)
+		.charge(-250)
 		.on("tick", tick)
 		.start();
 
@@ -251,15 +262,42 @@ function network(){
 		d3.select("#reseau").select("svg").remove();
 		var svg = d3.select("#reseau").append("svg")
 		.attr("width", width)
-		.attr("height", height);
+		.attr("height", height)
+		.call(d3.behavior.zoom().on("zoom", function () {svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")}))
+		.on("dblclick.zoom", null)
+		.append("g");
+		
 
+		// Graph Orienté
+		svg.append("svg:defs").selectAll("marker")
+		.data(["end"])      
+		.enter().append("svg:marker") 
+		.attr("id", String)
+		.attr("viewBox", "0 -5 10 10")
+		.attr("refX", 15)
+		.attr("refY", -1.5)
+		.attr("markerWidth", 4)
+		.attr("markerHeight", 4)
+		.attr("orient", "auto")
+		.append("svg:path")
+		.attr("d", "M0,-5L10,0L0,5");
+		
 		//Edges
-		var link = svg.selectAll(".link")
+		var g = svg.selectAll(".link")
 		.data(force.links())
-		.enter().append("line")
+		.enter().append("g");
+		var link = g.append("line")
 		.attr("class", "link")
 		.style("stroke-width", function(d) { return Math.sqrt(d.value); })
-		.style("stroke", function(d) { return d.color });	
+		.style("stroke", function(d) { return d.color })
+		.attr("marker-end", "url(#end)")
+		
+		var text = g.append("text")
+		.attr('text-anchor', 'middle')
+		.attr("dy", "0.5em")
+		.style("font", "15px sans-serif")
+		.text(function(d) { return d.relation; })
+		.style("fill", function(d) { return d.color; });
 
 		//Nodes
 		var node = svg.selectAll(".node")
@@ -269,10 +307,6 @@ function network(){
 		.style("opacity", 0.9)
 		.on("mouseover", mouseover)
 		.on("mouseout", mouseout)
-		.on("click",function(d){
-			// rajouter location.href = d.url (attribut des noeuds)
-			alert(d.name);
-		})
 		.call(force.drag);
 
 		//Photos de profil
@@ -299,6 +333,9 @@ function network(){
 		.attr("y1", function(d) { return d.source.y; })
 		.attr("x2", function(d) { return d.target.x; })
 		.attr("y2", function(d) { return d.target.y; });
+		
+		text.attr("x", function(d) {return (d.target.x+d.source.x)/2; })
+			.attr("y", function(d) { return (d.target.y+d.source.y)/2; });
 
 		node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 		}
@@ -352,8 +389,6 @@ function network(){
 				noeudAselectionner.push(linksTotal[i]["source"]); // Ajout lien 
 			}
 		}
-
-		console.log(noeudAselectionner);
 				
 		nodes = [];
 		for(i = 0; i < nodesTotal.length; i++){
@@ -375,7 +410,8 @@ function network(){
 			source: sourceNode,
 			target: targetNode,
 			value: l.value,
-			color: l.color
+			color: l.color,
+			relation: l.relation
 		  };
 		});
 		
@@ -398,15 +434,41 @@ function network(){
 		d3.select("#reseau").select("svg").remove();
 		var svg = d3.select("#reseau").append("svg")
 		.attr("width", width)
-		.attr("height", height);
-
+		.attr("height", height)
+		.call(d3.behavior.zoom().on("zoom", function () {svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")}))
+		.on("dblclick.zoom", null)
+		.append("g");
+		
+		// Graph Orienté
+		svg.append("svg:defs").selectAll("marker")
+		.data(["end"])      
+		.enter().append("svg:marker") 
+		.attr("id", String)
+		.attr("viewBox", "0 -5 10 10")
+		.attr("refX", 15)
+		.attr("refY", -1.5)
+		.attr("markerWidth", 4)
+		.attr("markerHeight", 4)
+		.attr("orient", "auto")
+		.append("svg:path")
+		.attr("d", "M0,-5L10,0L0,5");
+		
 		//Edges
-		var link = svg.selectAll(".link")
+		var g = svg.selectAll(".link")
 		.data(force.links())
-		.enter().append("line")
+		.enter().append("g");
+		var link = g.append("line")
 		.attr("class", "link")
 		.style("stroke-width", function(d) { return Math.sqrt(d.value); })
-		.style("stroke", function(d) { return d.color });	
+		.style("stroke", function(d) { return d.color })
+		.attr("marker-end", "url(#end)")
+		
+		var text = g.append("text")
+		.attr('text-anchor', 'middle')
+		.attr("dy", "0.5em")
+		.style("font", "15px sans-serif")
+		.text(function(d) { return d.relation; })
+		.style("fill", function(d) { return d.color; });
 
 		//Nodes
 		var node = svg.selectAll(".node")
@@ -416,10 +478,6 @@ function network(){
 		.style("opacity", 0.9)
 		.on("mouseover", mouseover)
 		.on("mouseout", mouseout)
-		.on("click",function(d){
-			// rajouter location.href = d.url (attribut des noeuds)
-			alert(d.name);
-		})
 		.call(force.drag);
 
 		//Photos de profil
@@ -446,6 +504,9 @@ function network(){
 		.attr("y1", function(d) { return d.source.y; })
 		.attr("x2", function(d) { return d.target.x; })
 		.attr("y2", function(d) { return d.target.y; });
+		
+		text.attr("x", function(d) {return (d.target.x+d.source.x)/2; })
+			.attr("y", function(d) { return (d.target.y+d.source.y)/2; });
 
 		node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 		}
