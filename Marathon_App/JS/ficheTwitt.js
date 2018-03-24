@@ -12,10 +12,14 @@ function affichageTimeLine() {
          '<p class="Twit1">'+data[0]["tweet1"]+'</p>'+
          '<p class="NomT2">@'+data[0]["nom"]+'</p>'+
          '<p class="Twit2">'+data[0]["tweet2"]+'</p>'+
+         '<p class="NomT3">@'+data[0]["nom"]+'</p>'+
+         '<p class="Twit3">'+data[0]["tweet3"]+'</p>'+
          '<p class="hashtag">#'+data[0]["motCles"]+'</p>'+
          '<p class="Post"></p>'+
          '<p class="RT"><span class="glyphicon glyphicon-retweet"></span></p>'+
          '<p class="LIKE"><span class="glyphicon glyphicon-heart"></span></p>'+
+         '<p class="RT2"><span class="glyphicon glyphicon-retweet"></span></p>'+
+         '<p class="LIKE2"><span class="glyphicon glyphicon-heart"></span></p>'+
          ' <img src="img/PP/1.png" alt="Canevas" />'+
          '</div>'+
       '</section>' ;
@@ -32,10 +36,14 @@ function affichageTimeLine() {
          '<p class="Twit1">'+data[i]["tweet1"]+'</p>'+
          '<p class="NomT2">@'+data[i]["nom"]+'</p>'+
          '<p class="Twit2">'+data[i]["tweet2"]+'</p>'+
+         '<p class="NomT3">@'+data[i]["nom"]+'</p>'+
+         '<p class="Twit3">'+data[i]["tweet3"]+'</p>'+
          '<p class="hashtag">#'+data[i]["motCles"]+'</p>'+
          '<p class="Post">'+data[i]["nb_tweet"]+'</p>'+
 			'<p class="RT"><span class="glyphicon glyphicon-retweet"></span></p>'+
          '<p class="LIKE"><span class="glyphicon glyphicon-heart"></span></p>'+
+         '<p class="RT2"><span class="glyphicon glyphicon-retweet"></span></p>'+
+         '<p class="LIKE2"><span class="glyphicon glyphicon-heart"></span></p>'+
          ' <img src="img/PP/'+j+'.png" alt="Canevas" />'+
          '</div>'+
       '</section>';

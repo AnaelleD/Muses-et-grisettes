@@ -16,7 +16,7 @@ function actuFrise(){
 			laCarte.className = "single-card active";
 
 			var periodeOccult = document.getElementsByClassName("periods-container");
-			console.log(periodeOccult[0].attributes.style);
+			periodeOccult[0].style.opacity=0;
 		})
 	})
 }
