@@ -32,14 +32,15 @@
 	<!-- Scripts pour les sections -->
 	<script src="JS/maps_femme.js"></script> 
 	<script src="JS/api_dbpedia.js"></script> 
-	<script src="JS/network.js"></script> 
+	<script src="JS/network.js"></script>
+	<script src="JS/networkInit.js"></script> 
 	<script src="JS/ficheTwitt.js"></script> 
 	<script src="JS/search_bar.js"></script>
 	<script src="JS/ficheTwittRecherche.js"></script>
 
 </head>
 
-<body onload="initmap();actumap();femmes_wiki();network();affichageTimeLine();actuFrise();"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
+<body onload="initmap();actumap();femmes_wiki();network();networkInit();actuFrise();"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
 
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -83,7 +84,7 @@
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/F1Bz28EWHiY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="margin-left:50%;margin-top:-15%"></iframe>
 		</div>
 
-		<div id="section1" class="container body-wrap" >
+		<div id="section1" class="container body-wrap"  >
 		<h1>Frise temporelle</h1>
 		  <div class="pres-timeline" id="this-timeline">
 		<!-- ###   -->
@@ -139,7 +140,7 @@
 		<!--   </div> -->
 		<!-- ### -->
 		<!--<div class="cards-section"> -->
-			<div id="fiche" class="cards-container">
+			<div id="fiche" class="cards-container" >
 			 </div>
 		<!--</div> -->
 		<!-- ###   -->
@@ -150,7 +151,7 @@
 
       
   <!-- # reseau -->
-		<div id="section2" class="container"> 
+		<div id="section2" class="container" > 
 			<div class="container">
       				<div class="btn-group" data-toggle="buttons" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="2300" data-offset-bottom="1340" >
 						<label class="btn btn-rouge"><input type="checkbox" value="1" name="periode" >Femmes légendaires</label>
@@ -164,7 +165,7 @@
 		<h1>Réseau social</h1> 
 		<h2>Séléctionnez une période:</h2> 
 			<div class="well" id="stopDiv">
-				<div id="reseau"></div>
+				<div id="reseau" ></div>
 			</div>
 		</div>
 <!-- # MAP -->

@@ -4,7 +4,7 @@ femmes_wiki = function(){
 	"Rose-Eliandre Bellemare","Véronique Vendell"] //liste des femmes deja presentes dans le muse. Pb d'affichage wiki pour 2 dernieres
 	
 	///// Femmes originaires de Montpellier sur Wikipedia /////
-	var url = "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="; 
+	var url = "https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="; 
 	var query = [
 		"PREFIX owl: <http://www.w3.org/2002/07/owl#>",
 		"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
@@ -62,7 +62,7 @@ femmes_wiki = function(){
 	
 		///// Femmes qui sont passées par la ville de Montpellier /////
 		// On recherche Montpellier dans le "comment" des femmes française
-	var url = "http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="; 
+	var url = "https://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query="; 
 	var query2 = [
 		"PREFIX owl: <http://www.w3.org/2002/07/owl#>",
 		"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>",
