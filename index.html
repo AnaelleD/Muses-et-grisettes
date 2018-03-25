@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Dames de Montpellier</title>
+ 	<meta http-equiv="Content-Type"content="text/html; charset=utf-8" /> 
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	
+ 		 <!-- STYLE -->
+	<link rel="stylesheet"	href="CSS/style.css"	type="text/css"	/>	<!-- feuille de style -->
+	<link rel="stylesheet" href="bootstrap/bootstrap/css/bootstrap.min.css"><!-- style Bootstrap v3.3.7 -->
+	<link rel="stylesheet" href="CSS/timeline.css"><!-- timeline -->
+	<link rel="stylesheet" href="CSS/leaflet.css"><!-- leaflet -->
+	<link rel="stylesheet" href="CSS/wiki.css" />
+	<link rel="stylesheet" href="CSS/network.css" />
+	<link rel="stylesheet" href="CSS/jquery-ui.css">
+	 	 <!-- JQUERY -->
+ 	<script src="bootstrap/jQuery.js"></script> 
+ 	<script src="bootstrap/jqueryFX.custom/jquery-ui.js"></script>  
+ 	<script src="bootstrap/jqueryFX.custom/jquery-ui.min.js"></script> 
+	<script src="JS/jquery-3.3.1.min.js"></script>
+	<script src="JS/jquery-1.12.4.js"></script>
+	<script src="JS/jquery-ui.js"></script>
+	
+	<!--  D3 __v4--><script src="JS/d3.v4.js"> </script> 
+	<!--  D3 __v3--><script src="JS/d3.v3.min.js"></script>
+
+ 	<!-- Bootstrap v3.3.7 --><script src="bootstrap/bootstrap/js/bootstrap.min.js"></script>  
+ 	<!--Leaflet --><script src="JS/leaflet.js"></script>
+ 	<!--Maps --><script src="JS/maps_femme.js"></script> 
+ 	
+	<!-- Scripts pour les sections -->
+	<script src="JS/maps_femme.js"></script> 
+	<script src="JS/api_dbpedia.js"></script> 
+	<script src="JS/network.js"></script>
+	<script src="JS/networkInit.js"></script> 
+	<script src="JS/ficheTwitt.js"></script> 
+	<script src="JS/search_bar.js"></script>
+	<script src="JS/ficheTwittRecherche.js"></script>
+
+</head>
+
+<body onload="initmap();actumap();femmes_wiki();network();networkInit();actuFrise();"  id="myPage" data-spy="scroll" data-target=".navbar" data-offset="100" >
+
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span> 
+		  </button>
+		  <a class="navbar-brand" href="index.html"><img src="img/logo/logo.png"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">ACCUEIL</a></li>
+				<li><a href="#section1">Frise temporelle</a></li>
+				<li><a href="#section2">Réseau social</a></li>
+				<li><a href="#section3">Carte</a></li>
+				<li><a href="#section4">Suggestion d'amies</a></li>
+				<li>
+					<form class="navbar-form" role="search">
+						<div class="input-group">
+							<input class="form-control" type="text" placeholder="Rechercher une femme..." size = "40px" id="search_bar">
+							<div class="input-group-btn">
+								<input type="button" class="btn btn-warning" id="search_button" value="Go"/>
+							</div>
+						</div>
+					</form>
+				</li>
+			</ul>
+		</div>
+	  </div>
+	</nav>
+		
+		<div id="Accueil" class="jumbotron text-center ">
+			<img src="img/logo/header.png" id="header">
+		</div>
+		
+		<div class="description text-center">
+			<p>Suivez les femmes qui ont marqué l'histoire de la ville de Montpellier. Voyagez dans le temps, découvrez leurs influences et parcourez le dédale des rues de la cité des Dames au travers de notre interface.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/F1Bz28EWHiY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="margin-left:50%;margin-top:-15%"></iframe>
+		</div>
+
+		<div id="section1" class="container body-wrap"  >
+		<h1>Frise temporelle</h1>
+		  <div class="pres-timeline" id="this-timeline">
+		<!-- ###   -->
+		<!-- <div class="periods-section">-->
+			<div class="periods-container">
+			  <section class="period-single" period="period1">
+				<h4 class="year"></h4>
+				<h2 class="title">Les femmes Légendaires</h2>
+				<p>Le moyen âge caractérise les mythes fondateurs de la cité montpelliéraine. Les Montpelliéraines sont décrites comme étant particulièrement belles et intelligentes, ce qui feraient d’elles les plus belles dames du pays.</p>
+			  </section>
+			  <section class="period-single" period="period2">
+				<h4 class="year">950-1100</h4>
+				<h2 class="title">Moyen-Age</h2>
+				<p>Le moyen âge caractérise les mythes fondateurs de la cité montpelliéraine. Les Montpelliéraines sont décrites comme étant particulièrement belles et intelligentes, ce qui feraient d’elles les plus belles dames du pays.</p>
+			  </section>
+			  <section class="period-single" period="period3">
+				<h4 class="year">1500-1599</h4>
+				<h2 class="title">16e siecle</h2>
+				<p>Le 16ème siècle est marqué par de grands troubles religieux. Cependant, certaines femmes comme Francèse de Cézelli ont pu affirmer leur courage et leur honneur. </p>
+			  </section>
+			  <section class="period-single" period="period4">
+				<h4 class="year">1600-1699</h4>
+				<h2 class="title">17e siecle</h2>
+				<p>Le 17ème siècle est caractérisé par l’apparition et l’avènement du portrait Mondain ainsi que l’apogée du portrait littéraire. Un nouveau divertissement qui fait son apparition dans les salons mondains et devient la nouvelle mode incontournable du siècle. Le milieu du 17ème siècle  est caractérisé par l’apparition des écrits galants et satiriques, ceux-ci servent à faire des rumeurs et des scandales.</p>
+			  </section>
+			  <section class="period-single" period="period5">
+				<h4 class="year">1700-1799</h4>
+				<h2 class="title">18e siecle</h2>
+				<p>Quel que soit le rang ou la condition des dames de Montpellier, celles-ci continuent de forcer l’admiration par leur beauté et leur intelligence. A cette époque, on constate l’apogée du libertinage et des commérages.  « Les fraîches dames de Montpellier valent bien un royaume » (citation Richelieu).</p>
+			  </section>
+			  <section class="period-single" period="period6">
+				<h4 class="year">1800-1900</h4>
+				<h2 class="title">19e siecle</h2>
+				<p>Le 19ème siècle est caractérisé par la croissance dû à la construction d’une ligne de chemin de fer plus précisément vers 1850. On peut constater alors, l’émergence du tourisme dans la cité. La ville de Montpellier est appréciée pour ses rues spacieuses, d’agréables cafés bien situés et les nombreuses fontaines faites en marbres. </p>
+			  </section>
+			  <section class="period-single" period="period7">
+				<h4 class="year">1900-2000</h4>
+				<h2 class="title">20e siecle</h2>
+				<p>Truffaut produit un film mettant à l’honneur les femmes de Montpellier, acté par des femmes de Montpellier « L’homme qui aimait les femmes », sorti en 1977.</p>
+			  </section>
+			  <div class="btn-back"></div>
+			  <div class="btn-next"></div>
+			</div>
+		<!--</div>-->
+		<!-- ### -->
+		<!--   <div class="timeline-section"> -->
+			<div class="timeline-container">
+			  <!--     # timeline graphic place holder - fill with js -->
+			  <div class="timeline"></div>
+			  <div class="btn-back"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h30v30H0z"/><path fill="#D8D8D8" fill-rule="evenodd" d="M11.828 15l7.89-7.89-2.83-2.828L6.283 14.89l.11.11-.11.11L16.89 25.72l2.828-2.83"/></svg></div>
+			  <div class="btn-next"><svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h30v30H0z"/><path fill="#D8D8D8" fill-rule="evenodd" d="M18.172 14.718l-7.89-7.89L13.112 4l10.606 10.607-.11.11.11.11-10.608 10.61-2.828-2.83 7.89-7.89"/></svg></div>
+			</div>
+		<!--   </div> -->
+		<!-- ### -->
+		<!--<div class="cards-section"> -->
+			<div id="fiche" class="cards-container" >
+			 </div>
+		<!--</div> -->
+		<!-- ###   -->
+		  </div>
+		<!-- # component ends -->
+		</div>
+		
+
+      
+  <!-- # reseau -->
+		<div id="section2" class="container" > 
+			<div class="container">
+      				<div class="btn-group" data-toggle="buttons" class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="2300" data-offset-bottom="1340" >
+						<label class="btn btn-rouge"><input type="checkbox" value="1" name="periode" >Femmes légendaires</label>
+						<label class="btn btn-jaune"><input type="checkbox" value="3" name="periode"  >Femmes du 16e siècle</label>
+						<label class="btn btn-vert"><input type="checkbox" value="4" name="periode"  >Femmes du 17e siècle</label>
+						<label class="btn btn-bleu"><input type="checkbox" value="5" name="periode" >Femmes du 18e siècle</label>
+						<label class="btn btn-mauve"><input type="checkbox" value="6" name="periode" >Femmes du 19e siècle</label>
+						<label class="btn btn-rose"><input  type="checkbox" value="7" name="periode"  >Femmes du 20e siècle</label>
+					</div>
+		</div>
+		<h1>Réseau social</h1> 
+		<h2>Séléctionnez une période:</h2> 
+			<div class="well" id="stopDiv">
+				<div id="reseau" ></div>
+			</div>
+		</div>
+<!-- # MAP -->
+		<div id="section3" class="container" >
+			<div class="well" >
+			<h1>Carte</h1> 
+			<h2>Séléctionnez une période:</h2> 
+				<div id="mapFemme"></div>
+			</div>
+		</div>
+
+		<div id="section4" class="container">
+			<div class="well">
+				<h2>Vous connaissez peut-être...(source Wikipédia)</h2>
+				<div id="femmesWiki"  style="overflow: scroll ;height: 500px; width: 100%;" class="tile"></div>
+				<div id="femmesWiki2"  style="overflow: scroll ;height: 500px; width: 100%;" class="tile"></div>
+			</div>	  
+		</div>
+
+		<div id="footer" class="container text-center">
+			<h3>Partenaires:</h3>
+				<img src="img/logo/um3.png" alt="UPVM3" style="width:100px">
+				<img src="img/logo/miashs.png" alt="Miashs" style="width:120px">
+				<img src="img/logo/crises.png" alt="CRISES" style="width:170px">
+				<img src="img/logo/itic.png" alt="ITIC" style="width:150px">
+		</div>
+</body>
+ 	<!-- Timeline--><script  src="JS/timeline.js"></script>
+</html>
